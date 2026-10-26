@@ -382,8 +382,12 @@ legend{padding:0;margin-bottom:12px}
 .footer-bottom nav{display:flex;flex-wrap:wrap;gap:6px 18px}
 
 /* Mockup banner */
+.mock-dock{position:fixed;left:16px;bottom:16px;z-index:70;max-width:calc(100vw - 32px);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .mock-flag{position:fixed;left:16px;bottom:16px;z-index:70;background:var(--white);border:1px solid var(--black);font-size:12px;padding:8px 12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:flex;gap:10px;align-items:center}
+.mock-dock .mock-flag{position:static;left:auto;bottom:auto;z-index:auto;max-width:100%;flex-wrap:wrap}
 .mock-flag a{font-weight:700}
+.mock-back{display:inline-flex;align-items:center;min-height:32px;padding:0 12px;background:var(--black);color:var(--white);font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}
+.mock-back:hover{background:var(--red);color:var(--white)}
 .mock-flag button{width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center}
 .mock-flag button svg{width:12px;height:12px}
 
@@ -396,6 +400,7 @@ legend{padding:0;margin-bottom:12px}
   .mobile-bar a:last-child{background:var(--red);color:var(--white)}
   .mobile-bar svg{width:17px;height:17px}
   body{padding-bottom:56px}
+  .mock-dock{bottom:68px}
   .mock-flag{bottom:68px}
   .section{padding:64px 0}
   .wrap{padding:0 16px}

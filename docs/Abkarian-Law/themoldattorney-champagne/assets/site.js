@@ -165,11 +165,17 @@
   /* ---------- Mockup flag ---------- */
   var flag = $('.mock-flag');
   if (flag) {
-    try { if (sessionStorage.getItem('mockFlagHidden')) flag.remove(); } catch (e) {}
     var x = $('button', flag);
-    if (x) x.addEventListener('click', function () {
-      flag.remove();
-      try { sessionStorage.setItem('mockFlagHidden', '1'); } catch (e) {}
-    });
+    if ($('.mock-dock')) {
+      if (x) x.addEventListener('click', function () {
+        flag.remove();
+      });
+    } else {
+      try { if (sessionStorage.getItem('mockFlagHidden')) flag.remove(); } catch (e) {}
+      if (x) x.addEventListener('click', function () {
+        flag.remove();
+        try { sessionStorage.setItem('mockFlagHidden', '1'); } catch (e) {}
+      });
+    }
   }
 })();
