@@ -796,3 +796,9 @@ section.press{background:var(--bone)}
     linear-gradient(135deg,rgba(122,18,25,.86) 0%,rgba(106,16,23,.88) 55%,rgba(84,12,18,.92) 100%),
     url(img/heroes/articles.jpg) center 50%/cover no-repeat,
     var(--black)}
+/* Team photo sections (abkarianlaw "About the firm", mold "Who you will talk to"): on tablet and desktop the
+   photo fills the whole left side, from the screen edge to the column edge; the offset block stays on its right and bottom */
+@media (min-width:901px){
+  #about .split > .ph.photo.team-shot:first-child,#who .split > .ph.photo.team-shot:first-child{width:auto!important;justify-self:stretch!important;
+    margin-left:calc(-1 * ((100vw - min(var(--wrap),100vw)) / 2 + 24px))!important}
+}

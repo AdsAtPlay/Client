@@ -630,3 +630,9 @@ body{--team-block-shadow:22px 22px 0 0 #A8935F;--photo-bg:#272B2E;--badge-chip:#
 #cost[data-photo]::before{content:"";position:absolute;inset:0;z-index:-2;background:url(img/heroes/articles.jpg) center 50%/cover no-repeat}
 .top-photo{--top-veil:linear-gradient(90deg,rgba(245,242,236,.96) 0%,rgba(245,242,236,.9) 50%,rgba(245,242,236,.7) 100%)}
 #cost[data-photo]::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(236,230,219,.96) 0%,rgba(236,230,219,.9) 55%,rgba(236,230,219,.78) 100%)}
+/* Team photo sections (abkarianlaw "About the firm", mold "Who you will talk to"): on tablet and desktop the
+   photo fills the whole left side, from the screen edge to the column edge; the offset block stays on its right and bottom */
+@media (min-width:901px){
+  #about .split > .ph.photo.team-shot:first-child,#who .split > .ph.photo.team-shot:first-child{width:auto!important;justify-self:stretch!important;
+    margin-left:calc(-1 * ((100vw - min(var(--wrap),100vw)) / 2 + 24px))!important}
+}
